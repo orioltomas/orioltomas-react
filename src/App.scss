@@ -1,0 +1,14 @@
+@import './styles/Header.scss';
+@import './styles/Main.scss';
+@import './styles/Tabs.scss';
+@import './styles/Headline.scss';
+@import './styles/About.scss';
+@import './styles/Projects.scss';
+@import './styles/Project.scss';
+
+.App {
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  background-color: rgb(10, 12, 29);
+}

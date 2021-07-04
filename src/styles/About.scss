@@ -1,0 +1,61 @@
+.App-about {
+    &__content {
+        display: block;
+
+        @media (min-width: 750px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__image {
+        position: relative;
+        min-width: 200px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 0px 0px 7px 0px white;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: auto;
+
+        @media (min-width: 500px) {
+            min-width: 275px;
+            width: 275px;
+            height: 275px;
+        }
+        @media (min-width: 750px) {
+            margin: unset;
+        }
+        @media (min-width: 1025px) {
+            min-width: 350px;
+            width: 350px;
+            height: 350px;
+        }
+    }
+    img {
+        position: absolute;
+        width: 200px;
+
+        @media (min-width: 500px) {
+            width: 275px;
+        }
+        @media (min-width: 1025px) {
+            width: 350px;
+        }
+    }
+    &__text {
+        color: white;
+        font-size: 16px;
+        padding-top: 50px;
+
+        @media (min-width: 750px) {
+            font-size: 18px;
+            line-height: 25px;
+            padding: 0 0 0 75px;
+            margin: unset;
+        }
+        @media (min-width: 1025px) {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+}

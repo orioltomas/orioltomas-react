@@ -1,0 +1,132 @@
+.App-main {
+    position: relative;
+    min-height: 700px;
+
+    &__content {
+        background-color: #fe758a;
+        position: absolute;
+        width: 100%;
+        margin: 125px 0;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        padding-left: 25px;
+
+        @media (min-width: 750px) {
+            padding-left: 75px;
+        }
+        @media (min-width: 1200px) {
+            padding-left: 200px;
+        }
+    }
+    &__name {
+        z-index: 1;
+        position: relative;
+        font-family: 'Righteous', cursive;
+        color: black;
+        font-size: 50px;
+
+        @media (min-width: 500px) {
+            font-size: 65px;
+        }
+        @media (min-width: 750px) {
+            font-size: 75px;
+        }
+    }
+    &__developer {
+        font-size: 16px;
+        width: fit-content;
+        background-color: black;
+        color: white;
+        margin-top: 20px;
+        padding: 10px 18px;
+        border-radius: 25px;
+        font-size: 10px;
+
+        @media (min-width: 500px) {
+            font-size: 12px;
+        }
+        @media (min-width: 750px) {
+            font-size: 14px;
+        }
+    }
+    &__more {
+        position: absolute;
+        bottom: -100px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        span {
+            position: absolute;
+            width: 13px;
+            height: 2px;
+            background-color: #fe758a;
+
+            &:first-of-type {
+                left: 15px;
+                transform: rotate(45deg);
+                animation: arrowTopMove .5s infinite alternate-reverse linear;
+            }
+            &:nth-of-type(2) {
+                left: 16px;
+                transform: translateX(7px) rotate(-45deg);
+                animation: arrowTopMove .5s infinite alternate-reverse linear;
+            }
+            &:nth-of-type(3) {
+                left: 15px;
+                transform: rotate(45deg);
+                animation: arrowBottomMove .5s infinite alternate-reverse linear;
+            }
+            &:nth-of-type(4) {
+                left: 16px;
+                transform: translateX(7px) rotate(-45deg);
+                animation: arrowBottomMove .5s infinite alternate-reverse linear;
+            }
+
+            @keyframes arrowTopMove {
+                from {
+                    top: 18px;
+                }
+                to {
+                    top: 24px;
+                }
+            }
+            @keyframes arrowBottomMove {
+                from {
+                    top: 26px;
+                }
+                to {
+                    top: 32px;
+                }
+            }
+        }
+        &::before {
+            content: '';
+
+        }
+    }
+    &__image {
+        position: absolute;
+        top: 0;
+        right: -810px;
+        
+        @media (min-width: 500px) {
+            right: -700px;
+        }
+        @media (min-width: 750px) {
+            right: -525px;
+        }
+        @media (min-width: 1000px) {
+            right: -350px;
+        }
+        @media (min-width: 1200px) {
+            right: -150px;
+        }
+        @media (min-width: 1500px) {
+            right: 50px;
+        }
+    }
+    img {
+        width: 1000px;
+    }
+}
