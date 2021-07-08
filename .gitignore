@@ -11,6 +11,11 @@
 # production
 /build
 
+# deployment
+firebase.json
+.firebaserc
+.firebase/*
+
 # misc
 .DS_Store
 .env.local
