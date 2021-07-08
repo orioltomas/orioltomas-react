@@ -1,19 +1,32 @@
-import macbook from './../macbook.png';
+import macbookcode from './../macbook-code.png';
 
-function Main () {
+function Main ({ anchorId }) {
+
+    const handleClick = () => {
+        var element = document.getElementById(anchorId);
+        element.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth'
+        });
+    }
+
     return (
         <div className="App-main">
             <div className="App-main__content">
-                <div className="App-main__name">ORIOL<br/>TOMAS</div>
+                <div className="App-main__name">
+                    <span className="App-main__name--desktop">ORIOL<br/>TOMAS</span>
+                    <span className="App-main__name--mobile">ORIOL TOMAS</span>
+                </div>
                 <div className="App-main__developer">FULL STACK DEVELOPER</div>
-            <div className="App-main__more">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <img className="App-main__image" src={ macbookcode } alt="Web development"></img>
+
+                <div className="App-main__more" onClick={ () => handleClick() }>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
-            <img className="App-main__image" src={ macbook } alt="Web development"></img>
         </div>
     )
 }

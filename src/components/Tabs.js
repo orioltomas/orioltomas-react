@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import About from './About'
 import Projects from './Projects'
 
-function Tabs () {
+function Tabs ({ anchorId }) {
     const [ tab, setTab ] = useState('about-me')
 
     const handleBtn = (tab) => {
@@ -19,7 +19,7 @@ function Tabs () {
 
 
     return (
-        <div className="App-tabs">
+        <div id={ anchorId } className="App-tabs">
             <div className="App-tabs__header">
                 <button className={ aboutTabClasses } onClick={ () => handleBtn('about-me') }>About me</button>
                 <button className={ projectsTabClasses } onClick={ () => handleBtn('projects') }>Projects</button>
