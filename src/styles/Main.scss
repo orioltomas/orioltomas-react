@@ -8,18 +8,16 @@
     &__content {
         position: relative;
         width: 100%;
-        margin: 0;
+        margin: 200px auto;
 
         @media (min-width: 750px) {
+            margin: 150px auto;
             padding-top: 25px;
             padding-bottom: 25px;
-            max-width: 90vw;
-            margin: 150px auto;
+            max-width: 1300px;
         }
         @media (min-width: 1400px) {
-            max-width: 1300px;
             padding-left: unset;
-            margin: 150px auto;
         }
     }
     &__name {
@@ -27,7 +25,7 @@
         position: relative;
         font-family: 'Righteous', cursive;
         color: #fe758a;
-        font-size: 50px;
+        font-size: 45px;
         text-align: center;
 
         @media (min-width: 500px) {
@@ -37,13 +35,15 @@
             color: black;
             text-align: left;
             font-size: 75px;
+            margin-left: 70px;
         }
         @media (min-width: 1400px) {
-            margin-left: 50px;
+            margin-left: 70px;
         }
 
         &--mobile {
             display: block;
+            background: #00000099;
 
             @media (min-width: 750px) {
                 display: none;
@@ -58,6 +58,8 @@
         }
     }
     &__developer {
+        z-index: 1;
+        position: relative;
         font-size: 16px;
         width: fit-content;
         background-color: black;
@@ -71,11 +73,11 @@
             font-size: 12px;
         }
         @media (min-width: 750px) {
-            margin: 20px 0 0;
+            margin: 20px 0 0 70px;
             font-size: 14px;
         }
         @media (min-width: 1400px) {
-            margin-left: 50px;
+            margin-left: 70px;
         }
     }
     &__more {
@@ -143,16 +145,17 @@
         }
     }
     &__image {
+        position: absolute;
+        top: 50%;
+        transform: translate(-7%, -50%);
         display: block;
         margin: auto;
-        width: 90vw;
+        width: 900px;
         
         @media (min-width: 750px) {
-            width: 1000px;
-            position: absolute;
-            top: 50%;
             transform: translateY(-50%);
             left: 300px;
+            width: 1000px;
         }
         @media (min-width: 1400px) {
             left: unset;
