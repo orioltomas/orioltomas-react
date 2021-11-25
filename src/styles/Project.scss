@@ -6,10 +6,6 @@
     &__name {
         text-transform: uppercase;
         font-size: 24px;
-
-        @media (min-width: 750px) {
-            font-size: 28px;
-        }
     }
     &__description {
         white-space: pre-line;
@@ -18,7 +14,7 @@
         font-size: 16px;
 
         @media (min-width: 750px) {
-            font-size: 20px;
+            font-size: 18px;
         }
     }
     &__button {
